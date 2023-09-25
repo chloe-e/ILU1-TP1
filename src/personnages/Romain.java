@@ -19,16 +19,20 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
-		force -= forceCoup;
-		if (force > 0) {
+		assert forceCoup>0;
+		int forceInit = this.force;
+		System.out.println(force);
+		this.force -= forceCoup;
+		System.out.println(forceInit);
+		if (this.force > 0) {
 			parler("Aïe !");
 		} else {
 			parler("J'abandonne...");
 		}
+		assert forceInit>this.force;
 	}
 	public static void main(String[] args) {
-		Romain Cesar = new Romain("Cesar",-2);
-		Gaulois Asterix = new Gaulois("Asterix",10);
+		Romain Cesar = new Romain("Cesar",6);
 		Cesar.parler("Bonjour je suis l'empereur des Romains.");
 		Cesar.recevoirCoup(10);
 	}
