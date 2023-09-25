@@ -5,6 +5,7 @@ public class Romain {
 	private int force;
 	
 	public Romain(String nom, int force) {
+		assert force>=0;
 		this.nom = nom;
 		this.force = force;
 	}
@@ -26,9 +27,9 @@ public class Romain {
 		}
 	}
 	public static void main(String[] args) {
-		Romain Cesar = new Romain("Cesar",9);
+		Romain Cesar = new Romain("Cesar",-2);
 		Gaulois Asterix = new Gaulois("Asterix",10);
-		Cesar.parler("Bonjouer je suis l'empereur des Romains.");
+		Cesar.parler("Bonjour je suis l'empereur des Romains.");
 		Cesar.recevoirCoup(10);
 	}
 }

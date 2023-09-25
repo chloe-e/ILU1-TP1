@@ -33,6 +33,15 @@ public class Druide {
 			parler("Je n'ai pas trouvé les ingrédients, ma potion est seulement "
 					+ "de force " + force + ".");
 		}
+		this.forcePotion = force;
+	}
+	public void booster(Gaulois guerrier) {
+		if (guerrier.getNom()=="Obélix") {
+			System.out.println("<< Non Obélix, tu n'auras pas de potion...>>");
+		}
+		else {
+			guerrier.boirePotion(this.forcePotion);
+		}
 	}
 	public static void main(String[] args) {
 		Druide Panoramix = new Druide("Panoramix",5,10);

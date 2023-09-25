@@ -33,7 +33,7 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 		this.effetPotion = forcePotion;
 		if (forcePotion==3) {
-			parler("Merci Druide, je sens que ma force est 3 fois décuplée.");
+			parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée.");
 		}
 	}
 	public static void main(String[] args) {
